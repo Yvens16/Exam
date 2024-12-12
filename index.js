@@ -18,7 +18,9 @@ console.log(isIsogram('')); // true
  */
 
 function isIsogram (word) {
-  console.log('first')
+    const letters = word.toLowerCase().split('')
+    const uniqueLetters = new Set(letters)
+    return letters.length === uniqueLetters.size
 }
 
 module.exports = isIsogram
