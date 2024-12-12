@@ -10,7 +10,7 @@ const isIsogram = str => {
 - tout mettre dans un tableau
 - la même lettre qu'elle soit miniscule ou majuscule = même chose // ~ upperCaseLow 
 - filtrer (.filter) le tableau pour chercher les mots avec les mêmes lettres (majuscule & minuscule confondus) en mettant une boucle "for" (ou "switch") 
-- retourner la fonction/tableau 
+- retourner la fonction/tableau (il faut que ça retourne un boléen)
 
 
 console.log(isIsogram('Dermatoglyphics')); // true
