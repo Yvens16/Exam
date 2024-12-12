@@ -24,14 +24,27 @@ console.log(isIsogram('')); // true
  * 
  */
 
-let tableIso = ['Dermatoglyphics','isIsogram','isogram','moOse','aba' ]
 
 function isIsogram (word) {
-  tableIso.filter()
-  
-  console.log('first')
-}
+  //tableaux de chaque lettre de la varible word
+  const tabWord = word.toLowerCase().split("")
+  // tableaux qui stockera les lettres une par une du mot qui n'appraissent pas 2 fois
+  let letterInWord = [] 
 
+  // boucle pour verifier que les lettres n'apparaissent pas eux fois dans le tableaux tabWord
+  for (let index = 0; index < tabWord.length; index++) {
+    if(letterInWord.includes(tabWord[index])){
+      //return false si le mot n'est pas un isograme
+      return false
+    }else{
+      letterInWord.push(tabWord[index])
+    }
+  }
+  //sinon renvoie true
+  console.log(true, word)
+  return true
+
+}
 
 module.exports = isIsogram
 
