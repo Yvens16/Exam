@@ -1,3 +1,3 @@
-const isIsogram = require('.');
+const isIsogram = require(".");
 
-test('Tests for exercice', () => {})
+test("Tests for exercice", () => {});
