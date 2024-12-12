@@ -17,8 +17,26 @@ console.log(isIsogram('')); // true
  * 
  */
 
-function isIsogram (word) {
-  console.log('first')
+function isIsogram(str) {
+  // console.log('Début de chaque test :', str);
+
+  const mot = str.toLowerCase();
+  for (let i = 0; i < mot.length; i++) {
+    if (mot.indexOf(mot[i]) !== mot.lastIndexOf(mot[i])) {
+      return false;
+    }
+  }
+  return true;
 }
+
+console.log(isIsogram('Dermatoglyphics')); // true
+console.log(isIsogram('isIsogram')); // false
+console.log(isIsogram('isogram')); // true
+console.log(isIsogram('moOse')); // false
+console.log(isIsogram('aba')); // false
+console.log(isIsogram('')); // true
+console.log(isIsogram('test unitaire')); // true
+console.log(isIsogram('examen')); // true
+console.log(isIsogram('anticonstitutionellement')); // true
 
 module.exports = isIsogram
