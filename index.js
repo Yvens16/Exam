@@ -24,15 +24,20 @@ console.log(isIsogram('')); // true
  * 
  */
 
-let tableIso = ['Dermatoglyphics','isIsogram','isogram','moOse','aba' ]
-
-function isIsogram (word) {
-  tableIso.filter()
-  
-  console.log('first')
+function isIsogram(word) {
+  const isIsogram = (str) => {
+    let tab = [];
+    tab.push(str[i].toLowCase());
+    for (let i = 0; i > str.length; i++) {
+      const letter = str[i].toLowerCase();
+      if (tab.filter(str[i]) === tab.filter(str[i])) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    console.log("first");
+  };
 }
 
-
-module.exports = isIsogram
-
-
+module.exports = isIsogram;
