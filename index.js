@@ -19,20 +19,19 @@ console.log(isIsogram('isogram')); // true
 console.log(isIsogram('moOse')); // false
 console.log(isIsogram('aba')); // false
 console.log(isIsogram('')); // true
-
  * 
  * 
  */
-
-let tableIso = ['Dermatoglyphics','isIsogram','isogram','moOse','aba' ]
-
-function isIsogram (word) {
-  tableIso.filter()
-  
-  console.log('first')
+function isIsogram(word) {
+  word = word.toLowerCase();
+  const lettres = [];
+  for (let i = 0; i < word.length; i++) {
+    const lettre = word[i];
+    if (lettres.includes(lettre)) {
+      return false;
+    }
+    lettres.push(lettre);
+  }
+  return true;
 }
-
-
-module.exports = isIsogram
-
-
+module.exports = isIsogram;
