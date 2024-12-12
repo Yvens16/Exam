@@ -18,7 +18,23 @@ console.log(isIsogram('')); // true
  */
 
 function isIsogram (word) {
-  console.log('first')
+  let tab = [];
+  for (let index = 0; index < word.length; index++) {
+    const element = word[index];
+    if(!tab.includes(element)){
+      tab.push(element.toLowerCase());
+    }
+  }
+  if(word.length === 0){
+    return true;
+  }else{
+    if(word.length === tab.length){
+      return true;
+    }else{
+      return false;
+    }
+  }
+ 
 }
 
 module.exports = isIsogram
