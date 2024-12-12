@@ -21,6 +21,6 @@ function isIsogram (word) {
     const letters = word.toLowerCase().split('')
     const uniqueLetters = new Set(letters)
     return letters.length === uniqueLetters.size
-}
+}git
 
 module.exports = isIsogram
