@@ -21,7 +21,7 @@ function isIsogram (word) {
   let tab = [];
   for (let index = 0; index < word.length; index++) {
     const element = word[index];
-    if(!tab.includes(element)){
+    if(!tab.includes(element.toLowerCase())){
       tab.push(element.toLowerCase());
     }
   }
