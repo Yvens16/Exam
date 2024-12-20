@@ -140,7 +140,7 @@ function removeDuplicates (arr) {
   }
   return unique
 }
-console.log(removeDuplicates(duplicates))
+// console.log(removeDuplicates(duplicates))
 
 let person = {
   name: 'Alice Smith',
@@ -153,17 +153,46 @@ let person = {
 }
 
 function toArray (obj) {
-  const arrToReturn = [];
-  Object.entries(obj).forEach(([key, value]) => {
+  const arrToReturn = []
+
+  // ############## With desctructuring
+  for (let [key, value] of Object.entries(obj)) {
     if (key !== 'address') {
-      arrToReturn.push(key, value);
+      arrToReturn.push(key, value)
+    } else {
+      for ([addressKey, addressValue] of Object.entries(obj[key])) {
+        arrToReturn.push(addressKey, addressValue)
+      }
     }
-    if (key === 'address') {
-      Object.entries(value).forEach(([key, value]) => {
-        arrToReturn.push(key, value);
-      })
-    }
-  });
-  return arrToReturn;
+  }
+
+  // ########### With keys
+  // for (key in obj) {
+  //   console.log(`For key ${key} the value is ${obj[key]}`)
+
+  //   if (key !== 'address') {
+  //     arrToReturn.push(key, obj[key])
+  //   }
+  //   if (key === 'address') {
+  //     const addressObj = obj[key]
+  //     for (adressKey in addressObj) {
+  //       arrToReturn.push(adressKey, addressObj[adressKey])
+  //     }
+  //   }
+  // }
+
+  // ############## basic
+  // Object.entries(obj).forEach(([key, value]) => {
+  //   if (key !== 'address') {
+  //     arrToReturn.push(key, value);
+  //   }
+  //   if (key === 'address') {
+  //     Object.entries(value).forEach(([key, value]) => {
+  //       arrToReturn.push(key, value);
+  //     })
+  //   }
+  // });
+  return arrToReturn
 }
-console.log(toArray());
+
+console.log(toArray(person))
