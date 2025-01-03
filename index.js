@@ -14,7 +14,19 @@ console.log(isIsogram('')); // true
  * 
  */
 
-function isIsogram (word) {}
+function isIsogram (word) {
+    const letter = [];
+    for (let i = 0; i < word.length; i++){
+        const lowerCase = word[i].toLowerCase()
+        if (letter.includes(lowerCase)) {
+            return false;
+        } else {
+                letter.push(lowerCase);
+            }
+    }
+    return true;
+}
+// console.log(isIsogram('aba'));
 
 
 module.exports = isIsogram
