@@ -2,12 +2,7 @@
  * 
  * Un isogramme est un mot qui n’a pas de lettres qui se répète, consécutivement	ou non. Ignorez la casse des lettres.   
 
-const isIsogram = str => {
-  // Your solution
-};
-
-
-
+x
 console.log(isIsogram('Dermatoglyphics')); // true
 console.log(isIsogram('isIsogram')); // false
 console.log(isIsogram('isogram')); // true
