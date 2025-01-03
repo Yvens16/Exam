@@ -19,9 +19,25 @@ console.log(isIsogram('')); // true
  * 
  */
 
-function isIsogram (word) {}
-
+function isIsogram (word) {
+  const MajToLow = word.toLowerCase();
+  const letterByletter = MajToLow.split('');
+  for(i=0; i<letterByletter.length; i++){
+    for(j=i+1; j<letterByletter.length; j++){
+      if(letterByletter[i]==letterByletter[j]){
+        return false;
+      }
+    }
+  }
+  return true;  
+}
 
 module.exports = isIsogram
 
 
+console.log(isIsogram('Dermatoglyphics')); // true
+console.log(isIsogram('isIsogram')); // false
+console.log(isIsogram('isogram')); // true
+console.log(isIsogram('moOse')); // false
+console.log(isIsogram('aba')); // false
+console.log(isIsogram('')); // true
